@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "version": "2.2.1",
-  "name": "Skiovox Helper",
+  "name": "Skiovox Skool Edition",
   "description": "A helper for the Skiovox exploit -- read more at skiovox.com",
   "icons": {
     "128": "icon.png"
