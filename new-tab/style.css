@@ -34,10 +34,9 @@ body {
 
 .top-right {
   position: relative;
-  margin: 15px auto 3px;
+  margin: 20px auto 3px;
   padding: 5px 10px;
   display: flex;
-  gap: 15px;
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   border-radius: 5px;
@@ -65,4 +64,22 @@ svg {
 
 #move {
   cursor: move;
+}
+.time{
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin:0;
+}
+.battery{
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+}
+.icons{
+  display: inline-flex;
+  margin: 0 0 0 15px; /* Adjust margin for spacing */
+  padding: 0;
+  gap: 15px;
 }
