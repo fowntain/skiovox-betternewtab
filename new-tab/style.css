@@ -38,7 +38,6 @@ body {
   padding: 5px 10px;
   display: flex;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   border-radius: 5px;
 }
 
@@ -78,6 +77,10 @@ svg {
   justify-content: center;
   width: 506.45px;
 }
+.topspacer{
+  margin-top: 20px;
+}
+
 .icons{
   display: inline-flex;
   margin: 0 0 0 15px; /* Adjust margin for spacing */
