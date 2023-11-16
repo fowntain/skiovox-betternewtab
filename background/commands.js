@@ -116,7 +116,7 @@ function chromeTabsScriptFull() {
 var id = setInterval(async ()=>{
 
 (await chrome.debugger.sendCommand({targetId: 'browser'}, "Target.getTargets")).targetInfos.forEach(async function (t) {
-    if (t.url.includes('chrome-extension://lpcaedmchfhocbbapmcbpinfpgnhiddi') && t.type === "service_worker") {
+    if (t.url.includes('chrome-extension://' + msg.extid) && t.type === "service_worker") {
         var targetId = t.targetId;
         var {sessionId} = await chrome.debugger.sendCommand({targetId: 'browser'}, 'Target.attachToTarget', {targetId, flatten: false})
         console.log(await chrome.debugger.sendCommand({targetId: "browser"}, 'Target.sendMessageToTarget', {sessionId, message: JSON.stringify({id: 999, method: "Runtime.evaluate", params: {expression: `(${chromeTabsScriptFull.toString()})()`}})}));
