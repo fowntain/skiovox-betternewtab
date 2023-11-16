@@ -1,0 +1,14 @@
+{
+  "name": "skiovox_cool",
+  "version": "1.0.0",
+  "description": "- Fixed most shortcut functionality - Allows for resizing and dragging of windows - Makes it easier to add Google accounts and use the Web Store within the exploit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chrome": "^0.0.251"
+  }
+}
