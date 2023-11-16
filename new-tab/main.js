@@ -17,7 +17,8 @@ let [
     webStore,
     addAccount,
     move,
-    fullscreen
+    fullscreen,
+    openInspectOnExt
 ] = document.querySelectorAll('svg')
 
 let time = document.querySelector('.time')
@@ -51,7 +52,11 @@ webStore.addEventListener('click', () => {
 addAccount.addEventListener('click', () => {
     chrome.tabs.create({ url: ADDSESSION_URL })
 })
-
+openInspectOnExt.addEventListener('click', async function (mouseEvt) {
+    var promptString = "{PLEASE SELECT THE EXTENSION/WORKER YOU WANT TO DEBUG. IF YOUR EXTENSION ISN'T IN THE LIST PRESS ENTER!!!}\n";
+    var targetList = await chrome.runtime.sendMessage("loadinspectargets");
+    console.log(targetList);
+})
 new DragController(move);
 new FullscreenController(fullscreen);
 new BatteryDisplay(battery);
